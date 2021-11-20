@@ -1,0 +1,46 @@
+// 
+// Buttons
+// 
+.btn:hover,
+.btn:focus,
+.btn:active {
+	box-shadow: none !important;
+}
+
+button, [type=button] {
+	cursor: pointer;
+}
+
+.btn {
+	font-size: rem(12px);
+	font-weight: $font-weight-bold;
+	
+	position: relative;
+	padding: 18px 45px;
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	border: none;
+	-webkit-appearance: none;
+	outline: 0;
+	box-shadow: none;
+	background: $primary;
+	border-radius: 0;
+	text-align: center;
+	z-index: 20;
+	transition: background .4s;
+    text-transform: uppercase;
+	
+	&:active:not(:disabled):not(.disabled),
+	&:hover:not(:disabled):not(.disabled),
+	&:focus:not(:disabled):not(.disabled),
+	&:active:not(:disabled):not(.disabled) {
+		background: #000;
+		color: $white;
+	}
+}
+
+@include media-breakpoint-down(xl) {
+}

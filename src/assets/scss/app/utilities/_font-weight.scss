@@ -1,0 +1,19 @@
+// stylelint-disable declaration-no-important
+
+$fs-weight: (
+    "tiny": 100,
+    "extra-light": 200,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "black": 900
+);
+
+@each $name, $weight in $fs-weight {
+    .f-weight-#{$name}, .f-weight-#{$weight}{
+        font-weight: #{$weight} !important;
+    }
+}

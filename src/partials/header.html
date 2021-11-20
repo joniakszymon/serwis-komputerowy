@@ -1,0 +1,31 @@
+<div class="header">
+    <div class="header-row">
+        <div class="header-brand">
+          <a href="index.html">
+            <p class="logo-text">Serwis GOLD</p>
+          </a>
+        </div>
+        <div class="header-right">
+            <div class="header-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="oferta.html">OFERTA</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="#0" id="tgl_menu">tgl menu</a></li>
+                </ul>
+            </div>
+            <div class="header-toggler">
+                <button id="toggle-menu" class="navbar-toggler hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner">
+                          <svg width="25px" height="25px" class="hamburger-icon">
+                            {{> hamburger-menu}}
+                          </svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    {{> offcanvas}}
+</div>

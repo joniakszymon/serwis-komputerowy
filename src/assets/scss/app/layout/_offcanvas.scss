@@ -1,0 +1,85 @@
+// 
+// layout: offcanvas
+//
+.offcanvas {
+    position: relative;
+    background-color: $white;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 998;
+    transition: all .3s;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 45px;
+    overflow-y: auto;
+    
+    .offcanvas-menu{
+        position: relative;
+        > ul {
+            margin-bottom: 0;
+            li {
+                &:not(:last-of-type) a {
+                    border-bottom: 1px solid #707070;
+                }
+                a {
+                    font-size: 14px;
+                    color: $primary;
+                    padding: 10px 0;
+                    text-transform: uppercase;
+                    display: block;
+                    font-weight: $font-weight-bold;
+            
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+    
+                &.sub-menu > a {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        width: 5px;
+                        height: 10px;
+                        z-index: 5;
+                        transform: translateY(-50%);
+                        background: url(../img/arrow_right_blue.png) no-repeat center center;
+                    }
+                }
+    
+                ul {
+                    display: none;
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+}
+
+.offcanvas.active{
+    display: block;
+}
+
+
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {
+    .offcanvas{
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .offcanvas{
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .offcanvas{
+
+    }
+}

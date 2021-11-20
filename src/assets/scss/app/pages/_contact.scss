@@ -1,0 +1,30 @@
+.contact-us {
+    .contact-box {
+
+    }
+    .mrg-t {
+        margin-top: 50px;
+    }
+}
+.company-information {
+    a {
+        color: #000;
+        transition: all .5s;
+    }
+}
+a:hover {
+    font-weight: bold;
+}
+@include media-breakpoint-up(xl) {
+    .contact-us {
+        padding-top: 150px;
+    }
+}
+@include media-breakpoint-down(sm) {
+    h3 {
+        font-size: 1.2rem;
+    }
+    .mrg-t {
+        flex-direction: column-reverse;
+    }
+}

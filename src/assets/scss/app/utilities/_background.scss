@@ -1,0 +1,90 @@
+// stylelint-disable declaration-no-important
+
+$bg-colors: () !default;
+$bg-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "gray-100":   $gray-100,
+    "gray-200":   $gray-200,
+    "gray-300":   $gray-300,
+    "gray-400":   $gray-400,
+    "gray-500":   $gray-500,
+    "gray-600":   $gray-600,
+    "gray-700":   $gray-700,
+    "gray-800":   $gray-800,
+    "gray-900":   $gray-900
+  ), $bg-colors
+);
+
+@each $color, $value in $bg-colors {
+    @include bg-variant(".bg-#{$color}", $value);
+}
+
+// background position
+$bg-position: () !default;
+$bg-position: map-merge(
+  (
+    "top":     top,
+    "left":    left,
+    "right":   right,
+    "bottom":  bottom,
+    "center":  center,
+    "left-top":  left top,
+    "center-top":  center top,
+    "right-top":  right top,
+    "left-center":  left center,
+    "right-center":  right center,
+    "left-bottom":  left bottom,
+    "center-bottom":  center bottom,
+    "right-bottom":  right bottom,
+  ), $bg-position
+);
+
+@each $pos, $value in $bg-position {
+    .background-position-#{$pos} {
+        background-position: #{$value} !important;
+    }
+}
+
+// backgroun size
+.background-size-cover{
+    background-size: cover!important;
+}
+.background-size-contain{
+    background-size: contain!important;
+}
+.background-size-auto{
+    background-size: auto!important;
+}
+
+//backrund attachment
+.background-attachment-fixed{
+    background-attachment: fixed!important;
+}
+.background-attachment-scroll{
+    background-attachment: scroll!important;
+}
+.background-attachment-auto{
+    background-attachment: auto!important;
+}
+
+//backrund repat
+.background-repeat{
+    background-repeat: repeat!important;
+}
+.background-no-repeat{
+    background-repeat: no-repeat!important;
+}
+.background-repeat-x{
+    background-repeat: repeat-x!important;
+}
+.background-repeat-y{
+    background-repeat: repeat-y!important;
+}

@@ -1,0 +1,48 @@
+//
+// component: box
+//
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 -20px;
+
+    .box-image, .box-content {
+        flex: 1;
+    }
+    .box-image {
+    }
+    .box-content {
+        padding-right: 40px;
+        padding-left: 20px;
+    }
+    &.box-left {
+        .box-content {
+            padding-right: 20px;
+            padding-left: 40px;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .box {
+        flex-direction: column;
+        .box-image {
+            margin-bottom: 20px;
+        }
+        &.box-left .box-content, .box-content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+@include media-breakpoint-down(xs) {
+    .box {
+        margin: 0;
+        &.box-left .box-content, .box-content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}
